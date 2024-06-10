@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 source "https://rubygems.org"
 ruby "3.1.2"
 
@@ -74,3 +78,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "devise"
