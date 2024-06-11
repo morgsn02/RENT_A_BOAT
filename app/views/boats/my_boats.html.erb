@@ -1,0 +1,14 @@
+<h1>My boats</h1>
+<ul>
+  <% @boats.each do |boat| %>
+  <li><%= link_to boat.name_boat, boat_path(boat)%>
+    <%= link_to "Delete",
+    boat_path(boat),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+  <%# <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "+ Add a new task", new_boat_path %>

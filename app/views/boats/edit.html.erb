@@ -1,2 +1,15 @@
-<h1>Boats#edit</h1>
-<p>Find me in app/views/boats/edit.html.erb</p>
+<h1>Edit your boat</h1>
+<%= form_with model: @boat do |f| %>
+  <%= f.label :name_of_your_boat %>
+  <%= f.text_field :name_boat %><br>
+  <%= f.label :price_per_day %>
+  <%= f.number_field :price_per_day %><br>
+  <%= f.label :year_construction_of_your_boat %>
+  <%= f.number_field :construction_year %><br>
+  <%= f.label :puissance_of_your_boat %>
+  <%= f.number_field :puissance %><br>
+  <%= f.label :nombre_maximal_autorisée %>
+  <%= f.number_field :max_person %>
+
+  <%= f.submit %>
+<% end %>
