@@ -78,3 +78,4 @@ end
 gem "cloudinary"
 gem "faker"
 gem 'ffi'
+gem 'rubygems-update', '>= 3.3.22'
