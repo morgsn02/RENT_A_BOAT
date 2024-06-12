@@ -1,8 +1,29 @@
-<h1><%= @boat.name_boat %>
-<h2>Details of boat</h2>
+<div class="container">
+
+<h1>Details of boat</h1>
+
+<div class="carre"><p>Photo</p></div>
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus obcaecati numquam, dolorem cum voluptate hic in iure aliquid nobis eius voluptates error beatae tempora, pariatur saepe aperiam vitae. Temporibus, numquam?</p>
+<h2><%= @boat.name_boat %></h2>
 
 
-<p><%= @boat.price_per_day %></p>
-<p><%= @boat.construction_year %></p>
-<p><%= @boat.puissance %>CH</p>
-<p><%= @boat.max_person %></p>
+<button type="button" class="btn btn-secondary mx-2">Year of onstruction <%= @boat.construction_year %> </button>
+
+<button type="button" class="btn btn-secondary mx-2">max person <%= @boat.max_person %> </button>
+
+<button type="button" class="btn btn-secondary mx-2">puissance <%= @boat.puissance %> CH </button>
+
+<button type="button" class="btn btn-secondary mx-2">Price per day <%= @boat.price_per_day %> </button>
+
+<div class="d-flex justify-content-center pt-5">
+
+  <%= link_to new_boat_booking_path(@boat) do %>
+    <button type="button" class="btn btn-primary mx-2">Click TO RENT BOAT</button>
+    <% end %>
+
+    <%= link_to boats_path  do %>
+    <button type="button" class="btn btn-primary">RETURN TO BOATS LIST</button>
+    <% end %>
+</div>
+</div>
