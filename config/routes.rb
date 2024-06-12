@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: "pages#home"
   get "boats/my_boats", to: "boats#my_boats"
+  get "bookings/my_bookings", to: "bookingss#my_bookings"
   resources :boats do
     resources :bookings, only: [:create, :new]
   end

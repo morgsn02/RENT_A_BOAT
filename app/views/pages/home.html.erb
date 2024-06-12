@@ -2,14 +2,12 @@
 <h1>RENT A BOAT! ⛵️</h1>
 <p><%= '🌟' * 17 %></p>
 
-<p>Find me in app/views/pages/home.html.erb</p>
-<h1>Mohcine</h1>
-<h1>Sonia</h1>
-<h1>Leanne</h1>
 
 
 
 <%= link_to new_boat_path  do %>
-  <button type="button" class="btn btn-primary">HIRE BOAT!</button>
+  <button type="button" class="btn btn-primary">LIST MY BOAT</button>
 <% end %>
-<button type="button" class="btn btn-primary">RENT BOAT!</button>
+<%= link_to boats_path  do %>
+<button type="button" class="btn btn-primary">RENT BOAT</button>
+<% end %>

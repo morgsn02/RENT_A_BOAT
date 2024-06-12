@@ -10,6 +10,6 @@ class BookingsController < ApplicationController
   end
 
   def my_bookings
-    
+
   end
 end

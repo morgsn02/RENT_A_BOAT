@@ -29,8 +29,15 @@
           </li>
         <% else %>
           <li class="nav-item">
+            <%= link_to "Mes boats",  boats_my_boats_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+            <%= link_to "Mes réservations",  boats_my_boats_path, class: "nav-link" %>
+            </li>
+          <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
+            </li>
+
         <% end %>
       </ul>
     </div>
