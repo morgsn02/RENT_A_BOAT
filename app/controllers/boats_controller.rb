@@ -1,4 +1,6 @@
 class BoatsController < ApplicationController
+
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_boat, only: %i[show edit update destroy]
 
   def index
@@ -6,6 +8,7 @@ class BoatsController < ApplicationController
   end
 
   def show
+    @boat = Boat.find(params[:id])
   end
 
   def new

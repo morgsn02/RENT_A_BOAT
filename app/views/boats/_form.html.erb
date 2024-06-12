@@ -1,0 +1,10 @@
+<%= simple_form_for(boat) do |f| %>
+  <%= f.input :name_boat %>
+  <%= f.input :price_per_day %>
+  <%= f.input :construction_year %>
+  <%= f.input :puissance %>
+  <%= f.input :max_person %>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
