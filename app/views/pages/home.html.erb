@@ -3,22 +3,14 @@
 <p><%= '🌟' * 17 %></p>
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container position-relative">
-    <div class="row">
-      <div class="col-12 col-sm-12 col-lg-6 col-xl-4">
-        <div class="home-search-card" class="card bg-blue-200 border-0">
-          <div class="container">
-            <h1>🌟Finding the perfect <strong>yacht charter</strong> is <strong>easy</strong>🌟</h1>
-            <p>Choose from over 50,000 chartered yachts & boats⛵️</p>
-            <%= link_to new_boat_path  do %>
-            <button type="button" class="btn btn-primary">LIST MY BOAT</button>
-            <% end %>
-            <%= link_to boats_path  do %>
-            <button type="button" class="btn btn-primary">RENT BOAT</button>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="container">
+    <h1>🌟Finding the perfect <strong>yacht charter</strong> is <strong>easy</strong>🌟</h1>
+    <p>Choose from over 50,000 chartered yachts & boats⛵️</p>
+<%= link_to new_boat_path  do %>
+  <button type="button" class="btn btn-primary">LIST MY BOAT</button>
+<% end %>
+<%= link_to boats_path  do %>
+<button type="button" class="btn btn-primary">RENT BOAT</button>
+<% end %>
   </div>
 </div>
