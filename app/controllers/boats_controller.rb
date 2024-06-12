@@ -1,32 +1,52 @@
 class BoatsController < ApplicationController
+  before_action :set_boat, only: %i[show edit update destroy]
+
   def index
+    @boats = Boat.all
   end
 
   def show
   end
 
   def new
+    @boat = Boat.new
   end
 
   def create
+    @boat = Boat.new(params[:boat])
+    @boat.user = current_user
+    if @boat.save!
+    redirect_to boats_path(@boat)
+    end
   end
 
   def edit
   end
 
   def update
+    boat.update!(boat_params)
+    redirect_to boats_path(@boat)
   end
 
   def destroy
+    @boat.destroy
+    redirect_to boats_path, status: :see_other
   end
 
   def my_boats
-
+    @boats = Boat.where(user_id: current_user)
   end
 
-  # private
-  # def article_params
-  #   params.require(:article).permit(:title, :body, :photo)
-  # end
+  private
 
+  def boat_params
+    params.require(:boat).permit(:name_boat, :price_per_day, :date_construction, :puissance, :max_person)
+    # private
+    # def article_params
+    # params.require(:article).permit(:title, :body, :photo)
+  end
+
+  def set_boat
+    @boat = Boat.find(params[:id])
+  end
 end
