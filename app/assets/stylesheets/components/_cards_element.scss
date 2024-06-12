@@ -1,6 +1,11 @@
 .card-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
+grid-gap: 16px;
+a{
+  text-decoration: none;
+  color: black;
+}
 }
 
 .card-trip {
@@ -15,6 +20,15 @@ grid-template-columns: repeat(3, 1fr);
   object-fit: cover;
 }
 
+.card-trip h6 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+}
+
 .card-trip h2 {
   font-size: 16px;
   font-weight: bold;
@@ -22,7 +36,7 @@ grid-template-columns: repeat(3, 1fr);
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 10px;
   opacity: .7;
   margin: 0;
 }
