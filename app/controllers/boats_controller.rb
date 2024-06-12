@@ -6,7 +6,6 @@ class BoatsController < ApplicationController
   end
 
   def show
-    @boat = Boat.find(params[:id])
   end
 
   def new
@@ -20,25 +19,22 @@ class BoatsController < ApplicationController
     redirect_to boats_path(@boat)
     end
   end
-  
+
   def edit
-    @boat = Boat.find(params[:id])
   end
 
   def update
-    @boat = Boat.find(params[:id])
     boat.update!(boat_params)
     redirect_to boats_path(@boat)
   end
 
   def destroy
-    @boat = Boat.find(params[:id])
     @boat.destroy
     redirect_to boats_path, status: :see_other
   end
 
   def my_boats
-    @my_boats = Boat.where(user_id: current_user)
+    @boats = Boat.where(user_id: current_user)
   end
 
   private
