@@ -1,2 +1,14 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<h1>Réserver et payer</h1>
+
+<%# j'affiche le bateaux %>
+<div class="carre"><p>Photo</p></div>
+<h2>Details of boat</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus obcaecati numquam, dolorem cum voluptate hic in iure aliquid nobis eius voluptates error beatae tempora, pariatur saepe aperiam vitae. Temporibus, numquam?</p>
+<h3>Nom du bateau :</h3><h3><%= @booking.boat.name_boat %></h3><br>
+
+<div class="d-flex justify-content-around">
+  <h3>Date de début : <%= @booking.date_start %></h3>
+  <h3>Date de fin : <%= @booking.date_end %></h3>
+</div>
+
+<%# j'affiche le détail de la réservation avec le Cost_total %>
