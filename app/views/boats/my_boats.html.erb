@@ -1,4 +1,4 @@
-<h1>My boats</h1>
+<h1>My Boats</h1>
 <ul>
   <% @boats.each do |boat| %>
   <li><%= link_to boat.name_boat, boat_path(boat)%>
@@ -11,4 +11,27 @@
   <% end %>
 </ul>
 
-<%= link_to "+ Add a new task", new_boat_path %>
+
+<div id="header"></div>
+
+
+<div class="container mt-4">
+  <div class="justify-content-center card-container">
+    <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <h6 class="p-1 text-center"></h6>
+        <div class="card-trip-infos">
+    <div>
+      <h2>Title here</h2>
+      <p>Short description here!</p>
+    </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<%# <a class="btn btn-flat mt-4" href="#"><%= link_to "+ Add a new boat", new_boat_path %></a>
+
+<%= link_to new_boat_path do %>
+    <button type="button" class="btn btn-secondary mt-4 mx-2">Add a new boat</button>
+    <% end %>
