@@ -1,18 +1,12 @@
 Rails.application.routes.draw do
   root to: "pages#home"
   get "boats/my_boats", to: "boats#my_boats"
-  get "bookings/my_bookings", to: "bookingss#my_bookings"
+  get "bookings/my_bookings", to: "bookings#my_bookings"
   resources :boats do
     resources :bookings, only: [:create, :new]
   end
   resources :bookings, except: [:create, :new]
-
-  get "my_bookings", to: "bookings#my_bookings"
-
   devise_for :users
-
-
-
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

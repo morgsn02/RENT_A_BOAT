@@ -5,10 +5,10 @@
 </div>
 <ul>
     <% @my_bookings.each do |booking| %>
-      <li><%= link_to booking.date_start, booking_path(booking)%>
-        <%= link_to “Delete”,
+      <li><%= link_to booking.boat.name_boat, booking_path(booking) %>
+        <%= link_to "Delete",
         booking_path(booking),
-        data: {turbo_method: :delete, turbo_confirm: “Are you sure?“}
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
         %>
       </li>
     <% end %>
