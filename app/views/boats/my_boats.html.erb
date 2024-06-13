@@ -1,37 +1,36 @@
-<h1>My Boats</h1>
-<ul>
-  <% @boats.each do |boat| %>
-  <li><%= link_to boat.name_boat, boat_path(boat)%>
-    <%= link_to "Delete",
-    boat_path(boat),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
-  <%# <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
-  </li>
-  <% end %>
-</ul>
-
-
-<div id="header"></div>
-
-
-<div class="container mt-4">
-  <div class="justify-content-center card-container">
-    <div class="card-trip">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-          <h6 class="p-1 text-center"></h6>
-        <div class="card-trip-infos">
-    <div>
-      <h2>Title here</h2>
-      <p>Short description here!</p>
-    </div>
-        </div>
-    </div>
-  </div>
-</div>
 
 <%# <a class="btn btn-flat mt-4" href="#"><%= link_to "+ Add a new boat", new_boat_path %></a>
 
+<h1>Liste de mes bateaux</h1>
+<div class="container">
+
+  <div class="justify-content-center card-container">
+    <% @boats.each do |boat| %>
+    <%= link_to boat_path(boat) do %>
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <h6 class="p-1 text-center"><%= boat.name_boat %></h6>
+        <div class="card-trip-infos">
+          <div>
+              <p>Année de construction:<%= boat.construction_year %></p>
+              <p>Puissance: <%= boat.puissance %></p>
+              <p>Nombre de personnes: <%= boat.max_person %></p>
+          </div>
+        <h2>Prix/jour</h2><h2 class="card-trip-pricing"><%= boat.price_per_day%> €</h2>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
 <%= link_to new_boat_path do %>
     <button type="button" class="btn btn-secondary mt-4 mx-2">Add a new boat</button>
     <% end %>
+
+<ul>
+    <% @boats.each do |boat| %>
+    <li><%= boat.name_boat %></li>
+    <%= link_to "Supprimer votre bateau", boat_path(boat),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
+    <% end %>
+</div>
