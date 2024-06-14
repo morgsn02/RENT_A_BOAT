@@ -1,6 +1,6 @@
 
 <%# j'affiche le détail de la réservation avec le Cost_total %>
-<h1 class="p-1 text-center">VOTRE RESERVATION</h1>
+<h1 class="p-1 text-center">MA RESERVATION</h1>
   <div class="resa-container">
       <div class="card-trip">
         <% if @booking.boat.photo.attached? %>
@@ -28,6 +28,6 @@
 
 <div class="d-flex justify-content-center">
     <%= link_to boats_path  do %>
-    <button type="button" class="btn btn-secondary mt-4">RETURN TO BOATS LIST</button>
+    <button type="button" class="btn btn-secondary mt-4">Retourner sur la liste des bateaux</button>
     <% end %>
 </div>
