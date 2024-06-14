@@ -75,6 +75,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
+gem "pg_search"
 gem "cloudinary"
 gem "faker"
 gem 'ffi', '< 1.17.0'

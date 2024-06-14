@@ -1,5 +1,17 @@
-<h1>Liste des bateaux</h1>
 <div class="container">
+<h1>Liste des bateaux</h1>
+<div class="container d-flex flex-column align-items-center">
+<%= form_with url: boats_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+        params[:query],
+        class: "form-control mx-2",
+        placeholder: "Entrez nom de bateau"
+    %>
+  <%= submit_tag "Search", name: "", class: "btn btn-info" %>
+<% end %>
+</div>
+<div class="search-page"></div>
+
 
   <div class="justify-content-center card-container">
     <% @boats.each do |boat| %>

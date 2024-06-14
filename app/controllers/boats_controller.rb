@@ -5,6 +5,9 @@ class BoatsController < ApplicationController
 
   def index
     @boats = Boat.all
+    if params[:query].present?
+      @boats = Boat.search_by_name(params[:query])
+    end
   end
 
   def show
