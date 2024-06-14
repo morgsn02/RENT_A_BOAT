@@ -1,19 +1,18 @@
 
 <%# j'affiche le détail de la réservation avec le Cost_total %>
-<h1 class="p-1 text-center">VALIDEZ VOTRE RESERVATION</h1>
+<h1 class="p-1 text-center">VOTRE RESERVATION</h1>
   <div class="resa-container">
-          <div class="card-trip">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-            <h6 class="p-1 text-center"><%= @booking.boat.name_boat %></h6>
-            <div class="card-trip-infos">
-              <div>
-                  <p>Année de construction:<%= @booking.boat.construction_year %></p>
-                  <p>Puissance: <%= @booking.boat.puissance %></p>
-                  <p>Nombre de personnes: <%= @booking.boat.max_person %></p>
-              </div>
-            <h2>Prix/jour</h2><h2 class="card-trip-pricing"><%= @booking.boat.price_per_day%> €</h2>
-            </div>
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <h6 class="p-1 text-center"><%= @booking.boat.name_boat %></h6>
+        <div class="card-trip-infos">
+          <div>
+              <p>Année de construction:<%= @booking.boat.construction_year %></p>
+              <p>Puissance: <%= @booking.boat.puissance %></p>
+              <p>Nombre de personnes: <%= @booking.boat.max_person %></p>
           </div>
+        <h2>Prix/jour</h2><h2 class="card-trip-pricing"><%= @booking.boat.price_per_day%> €</h2>
+        </div>
       </div>
       <div class="resa-infos">
         <div class="pb-2">Date de début:</div>
@@ -22,10 +21,9 @@
         <div class="pb-2"><%= @booking.date_end %></div>
       </div>
   </div>
-<%= link_to bookings_my_bookings_path do %>
-    <button type="button" class="btn btn-primary mx-2">VALIDEZ VOTRE COMMANDE</button>
-    <% end %>
 
+<div class="d-flex justify-content-center">
     <%= link_to boats_path  do %>
-    <button type="button" class="btn btn-primary">RETURN TO BOATS LIST</button>
+    <button type="button" class="btn btn-secondary mt-4">RETURN TO BOATS LIST</button>
     <% end %>
+</div>
