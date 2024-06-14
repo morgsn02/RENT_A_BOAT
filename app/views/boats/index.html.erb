@@ -4,9 +4,13 @@
   <div class="justify-content-center card-container">
     <% @boats.each do |boat| %>
       <%= link_to boat_path(boat) do %>
-        <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-            <h6 class="p-1 text-center"><%= boat.name_boat %></h6>
+        <div class="card-trip"z>
+          <% if boat.photo.attached? %>
+            <%= cl_image_tag boat.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <% end %>
+          <h6 class="p-1 text-center"><%= boat.name_boat %></h6>
           <div class="card-trip-infos">
             <div>
                 <p>Année de construction:<%= boat.construction_year %></p>

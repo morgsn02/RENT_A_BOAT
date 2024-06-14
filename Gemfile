@@ -79,3 +79,4 @@ gem "cloudinary"
 gem "faker"
 gem 'ffi', '< 1.17.0'
 gem 'rubygems-update', '>= 3.3.22'
+gem "pg_search"
