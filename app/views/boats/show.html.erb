@@ -1,5 +1,5 @@
 <div class="container">
-<h1>Details of boat</h1>
+<h1>Critères du bateau</h1>
 
 <div class="card-product">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -33,7 +33,7 @@
     <p>Date de construction : <%= @boat.construction_year %></p>
     <p>Capacité maximale : <%= @boat.max_person %></p>
     <p>Puissance du bateau : <%= @boat.puissance %> CH</p>
-    <p>Price per day : <%= @boat.price_per_day %> $</p>
+    <p>Prix/jour : <%= @boat.price_per_day %> $</p>
   </div>
 </div>
 
@@ -41,11 +41,11 @@
 <div class="d-flex justify-content-center pt-5">
 
   <%= link_to new_boat_booking_path(@boat) do %>
-    <button type="button" class="btn btn-primary mx-2">Click TO RENT BOAT</button>
+    <button type="button" class="btn btn-secondary mx-2">Click pour louer un bateau</button>
     <% end %>
 
     <%= link_to boats_path  do %>
-    <button type="button" class="btn btn-primary">RETURN TO BOATS LIST</button>
+    <button type="button" class="btn btn-secondary">Retourner à la liste des bateaux</button>
     <% end %>
 </div>
 </div>
