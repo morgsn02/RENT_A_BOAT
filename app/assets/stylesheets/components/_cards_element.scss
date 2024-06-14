@@ -1,21 +1,29 @@
 .card-container {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-gap: 16px;
-a{
-  text-decoration: none;
-  color: black;
+  margin-bottom: 130px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
 }
+
+a {
+  text-decoration: none;
+  color: rgb(84, 76, 76);
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: orange;
 }
 
 
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.card-trip > img {
+.card-trip>img {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -26,6 +34,7 @@ a{
   font-weight: bold;
   margin: 0;
 }
+
 h1 {
   text-align: center;
 }
@@ -58,10 +67,30 @@ h1 {
   width: 40px;
 }
 
-body{
-  margin:0px;
-  }
-  #header{
-  height:100px;
-  background:#74745a;
-  }
+body {
+  margin: 0px;
+}
+
+#header {
+  height: 20px;
+  background: #74745a;
+}
+
+.resa-infos {
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  min-width: 300px;
+  padding: 20px;
+  box-shadow: 5px 5px slategray;
+}
+
+.resa-container {
+  margin: 0 176px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}
+
+.end-page {
+  margin-bottom: 200px;
+}

@@ -16,7 +16,7 @@ class BoatsController < ApplicationController
   end
 
   def create
-    @boat = Boat.new(params[:boat])
+    @boat = Boat.new(boat_params)
     @boat.user = current_user
     if @boat.save!
     redirect_to boats_path(@boat)
@@ -33,7 +33,7 @@ class BoatsController < ApplicationController
 
   def destroy
     @boat.destroy
-    redirect_to boats_path, status: :see_other
+    redirect_to boats_my_boats_path, status: :see_other
   end
 
   def my_boats
@@ -43,7 +43,7 @@ class BoatsController < ApplicationController
   private
 
   def boat_params
-    params.require(:boat).permit(:name_boat, :price_per_day, :date_construction, :puissance, :max_person)
+    params.require(:boat).permit(:name_boat, :price_per_day, :construction_year, :puissance, :max_person)
     # private
     # def article_params
     # params.require(:article).permit(:title, :body, :photo)
