@@ -1,4 +1,4 @@
-<h1 class="p-1 text-center">MY BOOKINGS!</h1>
+<h1 class="p-1 text-center">Mes Réservations !</h1>
 <%  %>
 <% if  @my_bookings.empty? %>
 Vous n'avez pas de réservation...
@@ -32,7 +32,7 @@ Vous n'avez pas de réservation...
         <div class="pb-2">Date de fin:</div>
         <div class="pb-2"><%= booking.date_end %></div>
 
-        <div><%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:'contient-img-trash' %></div>
+        <div><%= link_to "Supprimer", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:'contient-img-trash' %></div>
       </div>
     <% end %>
   </div>
